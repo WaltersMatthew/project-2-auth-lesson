@@ -27,6 +27,12 @@ Set up a new node/express app for your project 2
 * Edit theconfig.json as needed
 
 ## Part 1: Creating a user
+USER MODEL 
+----------
+email: varchar 255(string)
+password: varchar 255(string)
+
+sequelize model:create --name user --attributes email:string,password:string
 
 Creating a user is what happens when you sign up on a site. In many ways, it is exactly like creating any other CRUDable resource: you submit a form, it `POST`s to a `/users` endpoint, and we INSERT INTO the users table.
 
