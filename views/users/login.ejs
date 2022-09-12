@@ -1,7 +1,13 @@
+<% if (message) { %>
+    <p><%= message %></p>
+<%}%>
+
 <form action="/users/login" method="POST">
     <label for="email">Email:</label>
     <input id="email" type="email" name="email" required>
+
     <label for="password">Password:</label>
     <input type="password" name="password" id="password" required>
-    <button type="submit">Sign Up</button>
+
+    <button type="submit">Log in</button>
 </form>

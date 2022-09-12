@@ -9,17 +9,24 @@
 <body>
     <nav>
         <ul>
-            <li>
-                <a href="/users/new">Sign Up</a>
-            </li>
+            <!-- if the user is logged in -->
+            <% if(user) { %>
+                <li>
+                    <a href="/users/profile">Profile</a>
+                </li>
 
-            <li>
-                <a href="/users/login">Log in</a>
-            </li>
-
-            <li>
-                <a href="/users/logout">Log out</a>
-            </li>
+                <li>
+                    <a href="/users/logout">Log out</a>
+                </li>
+            <% } else { %>
+                <li>
+                    <a href="/users/new">Sign Up</a>
+                </li>
+                    
+                <li>
+                    <a href="/users/login">Log in</a>
+                </li>
+            <% } %>
         </ul>
     </nav>
 
